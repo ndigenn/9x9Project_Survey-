@@ -53,3 +53,16 @@ function getNextQuestionId(currentQuestionId) {
 			return null;
 	}
 }
+
+function surveyFormListener(form) {
+    
+	form.addEventListener('submit', event => {
+		event.preventDefault();
+
+		var formData = new FormData(form);
+
+		fetch('php/survey.php', { method: 'POST', body: formData })
+			.then(response => response.json())
+			.then(data => {});
+	});
+}
