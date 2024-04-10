@@ -6,19 +6,18 @@
 		<link href="css/styles.css" rel="stylesheet">
 		<title>Branching Form</title>
 </head>
+		<!-- Adding javascript file for branching functionality -->
 		<script src="script.js"></script>
 	<body>
 		<div class="container">
-			<br>
-			<button type="button" onclick="window.location.reload()">Meow</button>
-			<br>
-
 			<br>
 			<img src="images/9x9_logo3.png" width=100px height=100px>
 			<p>The <strong> <i>Building Math Identity One Digit at a Time</i></strong> project is centered around using mathematical puzzles to foster mathematical reasoning and math identity in a wide range of settings. We are actively seeking collaborators on many fronts and are excited that you have found your way to this form for connecting with us!</p>
 			<br>
 
+		<!-- Beginning of Survey -->
 		<form id="surveyForm">
+			<!-- Question 1 -->
 			<div id="question1" >
 				<label for="q1">How would you be interested in connecting with the 9x9 Project? Select all that apply. (You're not committing to anything, just letting us know what types of information our chief cat-herder should send your way.)</label><br>
 				<br>
@@ -33,6 +32,7 @@
 				<button type="button" onclick="nextQuestion('question1')">Next</button>
 			</div>
 
+			<!-- Question 2 -->
 			<br>
 			<div id="question2" style="display: none;">
 			<h3> We'd like to know a little more about how you could help get puzzles to youth. </h3>
@@ -48,65 +48,72 @@
 				<br>
 				<br>
 
+			<!-- Question 3 -->
 				<label for="q3"> What age groups do you work with, either directly or indirectly? Select all that apply.</label><br>
 				<input type="checkbox" name="q3" value="7_9"> Ages 7-9 <br>
 				<input type="checkbox" name="q3" value="10_12"> Ages 10-12 <br>
 				<input type="checkbox" name="q3" value="13_15"> Ages 13-15<br>
 				<input type="checkbox" name="q3" value="16"> Ages 16+<br>
 
-				<button type="button" onclick="nextQuestion('question2')">Next</button>
-				<br>
-			</div>
-
-
-			<div id="question2" style="display: none;">
-				<h3> We'd like to know a little more about how you could help get puzzles to adults.</h3>
-				<label for="q3">What access do you have to settings in which adults might solve puzzles? Select all that apply.<br>
-				<input type="checkbox" name="q3" value="educational"> I work with adults in an educational setting (e.g., college, university, vocational training, etc.)<br>
-				<input type="checkbox" name="q3" value="community_resedential"> I provide or develop programming for older adults through community or residential living groups<br>
-				<input type="checkbox" name="q3" value="media_presence"> I have a social media presence with a meaningful adult audience.<br>
-				<br>Some other way:<br>
-				<input type="text" placeholder="Other" name="q2">
-				<br>
-				<br>
-				<br>
-
 				<button type="button" onclick="nextQuestion('question3')">Next</button>
 				<br>
 			</div>
 
 
+			<!-- Question 4 -->
 			<div id="question4" style="display: none;">
-				<br>Ooh! You're interested in teaching a puzzles course? Yay! Where do you teach?<br>
-				<input type="text" placeholder="Answer here" name="q4">
+				<h3> We'd like to know a little more about how you could help get puzzles to adults.</h3>
+				<label for="q4">What access do you have to settings in which adults might solve puzzles? Select all that apply.<br>
+				<input type="checkbox" name="q4" value="educational"> I work with adults in an educational setting (e.g., college, university, vocational training, etc.)<br>
+				<input type="checkbox" name="q4" value="community_resedential"> I provide or develop programming for older adults through community or residential living groups<br>
+				<input type="checkbox" name="q4" value="media_presence"> I have a social media presence with a meaningful adult audience.<br>
+				<br>Some other way:<br>
+				<input type="text" placeholder="Other" name="q4">
+				<br>
+				<br>
+				<br>
+
 				<button type="button" onclick="nextQuestion('question4')">Next</button>
 				<br>
 			</div>
 
+
+			<!-- Question 5 -->
 			<div id="question5" style="display: none;">
-				<br> What link or links would you like to recommend as destinations for solvers?<br>
+				<br>Ooh! You're interested in teaching a puzzles course? Yay! Where do you teach?<br>
 				<input type="text" placeholder="Answer here" name="q5">
 				<button type="button" onclick="nextQuestion('question5')">Next</button>
 				<br>
 			</div>
 
+			<!-- Question 6 -->
 			<div id="question6" style="display: none;">
-				<br> What are some other ideas for how you might be collaborate with the 9x9 Project?<br>
+				<br> What link or links would you like to recommend as destinations for solvers?<br>
 				<input type="text" placeholder="Answer here" name="q6">
 				<button type="button" onclick="nextQuestion('question6')">Next</button>
 				<br>
 			</div>
 
+			<!-- Question 7 -->
 			<div id="question7" style="display: none;">
-				<br>What is your name? <br>
-				<input type="text" placeholder="Answer here" name="q7">
-
-				<br>What's your email address so we can follow up with you?<br>
+				<br> What are some other ideas for how you might be collaborate with the 9x9 Project?<br>
 				<input type="text" placeholder="Answer here" name="q7">
 				<button type="button" onclick="nextQuestion('question7')">Next</button>
 				<br>
 			</div>
 
+			<!-- Question 8 -->
+			<div id="question8" style="display: none;">
+				<br>What is your name? <br>
+				<input type="text" placeholder="Answer here" name="q8">
+
+				<br>What's your email address so we can follow up with you?<br>
+				<input type="text" placeholder="Answer here" name="q8">
+				<button type="button" onclick="nextQuestion('question8')">Next</button>
+				<br>
+			</div>
+
+			<!-- Submit Button -->
 			<div id="submitContainer" class="question-container">
 				<input type="submit" value="Submit">
 			</div>
