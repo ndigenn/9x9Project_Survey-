@@ -1,3 +1,5 @@
+<?php 
+
 // Database connection details
 $host = 'localhost';
 $user = 'u320299981_admin';
@@ -14,5 +16,10 @@ if ($conn->connect_error) {
 }
 
 // Retrieve data from the form
-$email = mysqli_real_escape_string($conn, $_POST['email']);
-$u_password = mysqli_real_escape_string($conn, $_POST['password']);
+$q1 = mysqli_real_escape_string($conn, $_POST['q1']);
+$q2 = mysqli_real_escape_string($conn, $_POST['q2']);
+
+echo $q1;
+echo $q2;
+
+?>

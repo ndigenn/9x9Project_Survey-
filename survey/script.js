@@ -5,8 +5,10 @@ function nextQuestion(currentQuestionId) {
 	var nextQuestionId = getNextQuestionId(currentQuestionId);
 	var nextQuestion = document.getElementById(nextQuestionId);
 
-	//hiding next question
-	nextQuestion.style.display = "block";
+	//showing next question
+	if(nextQuestion != ""){
+		nextQuestion.style.display = "block";
+	}
 }
 
 function getNextQuestionId(currentQuestionId) {
@@ -37,6 +39,7 @@ function getNextQuestionId(currentQuestionId) {
 			}
 			else {
 				//fill in
+				return "";
 			}
 
 		//question 2
@@ -55,14 +58,16 @@ function getNextQuestionId(currentQuestionId) {
 }
 
 function surveyFormListener(form) {
-    
 	form.addEventListener('submit', event => {
 		event.preventDefault();
 
 		var formData = new FormData(form);
+		console.log(formData);
 
 		fetch('php/survey.php', { method: 'POST', body: formData })
-			.then(response => response.json())
-			.then(data => {});
+			.then(response => response.text())
+			.then(data => {
+				console.log(data);
+			});
 	});
 }
