@@ -43,7 +43,7 @@
 				<input type="checkbox" name="q1-ideas" id="q1-ideas" value="other_ideas">
 				<label for="q1-ideas">I have other ideas for connecting with the project</label><br>
 				<br>
-				<button type="button" onclick="nextQuestion('question1')">Next</button>
+				<button type="button" onclick="nextQuestion('question1', 1)">Next</button>
 			</div>
 
 			<!-- Question 2 -->
@@ -66,75 +66,75 @@
 				<br>
 				<br>
 
-			<!-- Question 3 -->
+			<!-- Question 2 Part 2-->
 				<p> What age groups do you work with, either directly or indirectly? Select all that apply.</p><br>
-				<input type="checkbox" name="q3-7-9" id="q3-7-9" value="7_9">
-				<label for="q3-7-9">Ages 7-9</label><br>
-				<input type="checkbox" name="q3-10-12" id="q3-10-12" value="10_12">
-				<label for="q3-10-12">Ages 10-12</label><br>
-				<input type="checkbox" name="q3-13-15" id="q3-13-15" value="13_15">
-				<label for="q3-13-15">Ages 13-15</label><br>
-				<input type="checkbox" name="q3-16" id="q3-16" value="16">
-				<label for="q3-16">Ages 16+</label><br>
+				<input type="checkbox" name="q2-7-9" id="q2-7-9" value="7_9">
+				<label for="q2-7-9">Ages 7-9</label><br>
+				<input type="checkbox" name="q2-10-12" id="q2-10-12" value="10_12">
+				<label for="q2-10-12">Ages 10-12</label><br>
+				<input type="checkbox" name="q2-13-15" id="q2-13-15" value="13_15">
+				<label for="q2-13-15">Ages 13-15</label><br>
+				<input type="checkbox" name="q2-16" id="q2-16" value="16">
+				<label for="q2-16">Ages 16+</label><br>
 
-				<button type="button" onclick="nextQuestion('question3')">Next</button>
+				<button type="button" onclick="nextQuestion('question2', 2)">Next</button>
+				<br>
+			</div>
+
+
+			<!-- Question 3 -->
+			<div id="question3" style="display: none;">
+				<h3> We'd like to know a little more about how you could help get puzzles to adults.</h3>
+				<p>What access do you have to settings in which adults might solve puzzles? Select all that apply.</p><br>
+				<input type="checkbox" name="q3-edu" id="q3-edu" value="educational">
+				<label for="q3-edu">I work with adults in an educational setting (e.g., college, university, vocational training, etc.)</label><br>
+				<input type="checkbox" name="q3-comm" id="q3-comm" value="community_resedential">
+				<label for="q3-comm">I provide or develop programming for older adults through community or residential living groups</label><br>
+				<input type="checkbox" name="q3-media" id="q3-media" value="media_presence">
+				<label for="q3-media">I have a social media presence with a meaningful adult audience.</label><br>
+				<br>Some other way:<br>
+				<input type="text" placeholder="Other" name="q3-other" id="q3-other">
+				<br>
+				<br>
+				<br>
+
+				<button type="button" onclick="nextQuestion('question3', 3)">Next</button>
 				<br>
 			</div>
 
 
 			<!-- Question 4 -->
 			<div id="question4" style="display: none;">
-				<h3> We'd like to know a little more about how you could help get puzzles to adults.</h3>
-				<p>What access do you have to settings in which adults might solve puzzles? Select all that apply.</p><br>
-				<input type="checkbox" name="q4-edu" id="q4-edu" value="educational">
-				<label for="q4-edu">I work with adults in an educational setting (e.g., college, university, vocational training, etc.)</label><br>
-				<input type="checkbox" name="q4-comm" id="q4-comm" value="community_resedential">
-				<label for="q4-comm">I provide or develop programming for older adults through community or residential living groups</label><br>
-				<input type="checkbox" name="q4-media" id="q4-media" value="media_presence">
-				<label for="q4-media">I have a social media presence with a meaningful adult audience.</label><br>
-				<br>Some other way:<br>
-				<input type="text" placeholder="Other" name="q4-other" id="q4-other">
-				<br>
-				<br>
-				<br>
-
-				<button type="button" onclick="nextQuestion('question4')">Next</button>
+				<br>Ooh! You're interested in teaching a puzzles course? Yay! Where do you teach?<br>
+				<input type="text" placeholder="Answer here" name="q4-ans" id="q4-ans">
+				<button type="button" onclick="nextQuestion('question4', 4)">Next</button>
 				<br>
 			</div>
 
-
 			<!-- Question 5 -->
 			<div id="question5" style="display: none;">
-				<br>Ooh! You're interested in teaching a puzzles course? Yay! Where do you teach?<br>
+			<br> What link or links would you like to recommend as destinations for solvers?<br>
 				<input type="text" placeholder="Answer here" name="q5-ans" id="q5-ans">
-				<button type="button" onclick="nextQuestion('question5')">Next</button>
+				<button type="button" onclick="nextQuestion('question5', 5)">Next</button>
 				<br>
 			</div>
 
 			<!-- Question 6 -->
 			<div id="question6" style="display: none;">
-			<br> What link or links would you like to recommend as destinations for solvers?<br>
+				<br> What are some other ideas for how you might be collaborate with the 9x9 Project?<br>
 				<input type="text" placeholder="Answer here" name="q6-ans" id="q6-ans">
-				<button type="button" onclick="nextQuestion('question6')">Next</button>
+				<button type="button" onclick="nextQuestion('question6', 6)">Next</button>
 				<br>
 			</div>
 
 			<!-- Question 7 -->
 			<div id="question7" style="display: none;">
-				<br> What are some other ideas for how you might be collaborate with the 9x9 Project?<br>
-				<input type="text" placeholder="Answer here" name="q7-ans" id="q7-ans">
-				<button type="button" onclick="nextQuestion('question7')">Next</button>
-				<br>
-			</div>
+				<br><label for="q7-name">What is your name?</label><br>
+				<input type="text" placeholder="Answer here" name="q7-name" id="q7-name">
 
-			<!-- Question 8 -->
-			<div id="question8" style="display: none;">
-				<br><label for="q8-name">What is your name?</label><br>
-				<input type="text" placeholder="Answer here" name="q8-name" id="q8-name">
-
-				<br><label for="q8-email">What's your email address so we can follow up with you?</label><br>
-				<input type="text" placeholder="Answer here" name="q8-email" id="q8-email">
-				<button type="button" onclick="nextQuestion('question8')">Next</button>
+				<br><label for="q7-email">What's your email address so we can follow up with you?</label><br>
+				<input type="text" placeholder="Answer here" name="q7-email" id="q7-email">
+				<button type="button" onclick="nextQuestion('question7', 7)">Next</button>
 				<br>
 			</div>
 
