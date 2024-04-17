@@ -26,7 +26,7 @@ function nextQuestion(currentQuestionId, qNum) {
 	} while (!questions[nextQuestionId] && qNum < numberOfQuestions);
 
 	if (qNum >= numberOfQuestions){
-		nextQuestionId = "question" += numberOfQuestions;
+		nextQuestionId = "question" + numberOfQuestions;
 	}
 	document.getElementById(nextQuestionId).style.display = "block";
 }
