@@ -1,60 +1,60 @@
-function nextQuestion(currentQuestionId) {
+var questions = {
+	"question1": true,
+	"question2": false,
+	"question3": false,
+	"question4": false,
+	"question5": false,
+	"question6": false,
+	"question7": true
+};
+
+const numberOfQuestions = 7
+
+function nextQuestion(currentQuestionId, qNum) {
 	var currentQuestion = document.getElementById(currentQuestionId);
-	currentQuestion.style.display = "block";
+	currentQuestion.style.display = "none";
 
-	var nextQuestionId = getNextQuestionId(currentQuestionId);
-	var nextQuestion = document.getElementById(nextQuestionId);
+	if (qNum == 1){
+		getNextQuestions();
+	}	
 
-	//showing next question
-	if(nextQuestion != ""){
-		nextQuestion.style.display = "block";
+	var nextQuestionId = "";
+	do {
+		qNum++;
+		nextQuestionId = "question" + (qNum);
+		console.log("Next ID", nextQuestionId);
+	} while (!questions[nextQuestionId] && qNum < numberOfQuestions);
+
+	if (qNum >= numberOfQuestions){
+		nextQuestionId = "question" += numberOfQuestions;
 	}
+	document.getElementById(nextQuestionId).style.display = "block";
 }
 
-function getNextQuestionId(currentQuestionId) {
-	//logic branching
-	switch (currentQuestionId) {
-		case "question1":
-			var answer = document.querySelector('input[name="q1"]:checked').value;
-			if (answer === "mailing_list"){
-				return "";
-			}
-			else if (answer == "youth"){
-				return "question2";
-			}
-			else if (answer == "adults"){
-				return "";
-			}
-			else if (answer == "teach"){
-				return "";
-			}
-			else if (answer == "find_out_more"){
-				return "";
-			}
-			else if (answer == "links"){
-				return "";
-			}
-			else if (answer == "other_ideas"){
-				return "";
-			}
-			else {
-				//fill in
-				return "";
-			}
+function getNextQuestions() {
+	let youth = document.getElementById("q1-youth");
+	let adult = document.getElementById("q1-adult");
+	let teach = document.getElementById("q1-teach");
+	let links = document.getElementById("q1-links");
+	let ideas = document.getElementById("q1-ideas");
 
-		//question 2
-		case "question2":
-			var answer = document.querySelector('input[name="q2"]:checked').value;
-			if (answer === "") {
-				return "";
-			} else {
-				return "";
-			}
-		case "question3":
-			return "submitContainer";
-		default:
-			return null;
+	if (youth.checked){
+		questions["question2"] = true;
 	}
+	if (adult.checked){
+		questions["question3"] = true;
+	}
+	if (teach.checked){
+		questions["question4"] = true;
+	}
+	if (links.checked){
+		questions["question5"] = true;
+	}
+	if (ideas.checked){
+		questions["question6"] = true;
+	}
+
+	console.log("Question states", questions);
 }
 
 function surveyFormListener(form) {

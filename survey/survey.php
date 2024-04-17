@@ -16,10 +16,14 @@ if ($conn->connect_error) {
 }
 
 // Retrieve data from the form
-$q1 = mysqli_real_escape_string($conn, $_POST['q1']);
-$q2 = mysqli_real_escape_string($conn, $_POST['q2']);
+$q1_false = mysqli_real_escape_string($conn, $_POST['q1-mail']);
+$q1_true = mysqli_real_escape_string($conn, $_POST['q1-youth']);
+$q2_false = mysqli_real_escape_string($conn, $_POST['q2-7-9']);
+$q2_true = mysqli_real_escape_string($conn, $_POST['q2-10-12']);
 
-echo $q1;
-echo $q2;
+echo $q1_false;
+echo $q1_true;
+echo $q2_false;
+echo $q2_true;
 
 ?>
